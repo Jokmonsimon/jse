@@ -8,9 +8,9 @@
  */
 
 const backpack = {
-  name: "Everyday Backpack",
+  name: 'Everyday Backpack',
   volume: 30,
-  color: "grey",
+  color: 'grey',
   pocketNum: 15,
   strapLength: {
     left: 26,
@@ -23,4 +23,18 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  newName: function (updateName) {
+    this.name = updateName;
+  },
+  newVolume: function (updateVolume) {
+    this.volume = updateVolume;
+  },
 };
+
+console.log('Backpack Name Before:', backpack.name);
+backpack.newName('Back Bag');
+console.log('Backpack Name After:', backpack.name);
+
+console.log('Back Bag Volume Before:', backpack.volume);
+backpack.newVolume(55);
+console.log('Back Bag Volume After:', backpack.volume);
